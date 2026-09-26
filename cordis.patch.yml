@@ -1,0 +1,12 @@
+# lawagent-ui bundle patch
+#
+# 把「法学学习实训工作台」这一行注册进 profile：Host 半提供 /lawui/api 路由，
+# Client 半在 sidebar.footer.action 放一个入口、在 shell.overlay 里渲染三栏工作台。
+# 由 `dsh plugin` 像其他 bundle 一样维护。
+- insert:
+    - id: lawagent-ui
+      name: 'lawagent-ui'
+      # 学习档案根目录（可选）：默认取 ~/lawdata，可用环境变量 LAWAGENT_DATA_ROOT 覆盖，
+      # 或在此处显式指定，例如：
+      # config:
+      #   dataRoot: 'D:/lawdata'
