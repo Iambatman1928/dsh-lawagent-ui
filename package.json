@@ -1,0 +1,42 @@
+{
+  "name": "lawagent-ui",
+  "version": "1.0.0",
+  "description": "法学学习实训工作台：三栏学术风界面（左导航 / 中间工作区 / 右侧动态面板），直读 明律（lawagent preset）的学习档案，并可一键把指令发送给当前会话。",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.1.0-rc.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iambatman1928/dsh-lawagent-ui.git"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "law",
+    "legal",
+    "education",
+    "training",
+    "workbench"
+  ]
+}
